@@ -17,7 +17,7 @@ echo "研究分野:「{$title}」".PHP_EOL; // echo文で変数を埋め込ん�
  研究分野:「複合AIシステム」
 */
 
-# sprintf(), printf(): フォマードされた文字列の生成と出力
+# sprintf(format, args), printf(format, args): フォマードされた文字列の生成と出力
 /*
  よく使われるformat
  %s:　文字列(string)としてフォーマット
