@@ -402,7 +402,7 @@ $fields = [
 	'name'=>'名前',
 	'address' => '住所',
 	'tel'=>'電話番号',
-	'birthday'=>'誕生日',
+	'birthday'=>'生年月日',
 ];
 
 $ja_fileds = array_values($fields);
@@ -411,30 +411,43 @@ $en_fileds = array_keys($fields);
 # 関数を変数に代入したり、関数を引数として使う
 
 // 無名関数を引数として渡す:function() - $itemにタグをつける
-$map1 = array_map(function($item){
+$mapped_array1 = array_map(function($item){
 	return '<th>' . $item . '</th>';
 }, $ja_fileds);
-echo implode('', $map1), PHP_EOL;
+print_r($mapped_array1);
+echo implode('', $mapped_array1), PHP_EOL;
 /*出力
-<th>名前</th><th>住所</th><th>電話番号</th><th>誕生日</th>
+Array(
+  [0]=>"<th>名前</th>",
+  [1]=>"<th>住所</th>",
+  [2]=>"<th>電話番号</th>",
+  [3]=>"<th>生年月日</th>"
+)
+<th>名前</th><th>住所</th><th>電話番号</th><th>生年月日</th>
 */
 
 $fun1 = function($item){
     return '<th>' . $item. '</th>';
 };
 
-$map2 = array_map($fun1, $en_fields);
-print_r($map2);
-echo implode('',$map2), PHP_EOL;
+$mapped_array2 = array_map($fun1, $en_fields);
+print_r($mapped_array2);
+echo implode('',$mapped_array2), PHP_EOL;
 /*出力
+Array(
+  [0]=>"<th>name</th>",
+  [1]=>"<th>address</th>",
+  [2]=>"<th>tel</th>",
+  [3]=>"<th>birthday</th>"
+)
 <th>name</th><th>address</th><th>tel</th><th>birthday</th>
 */
 
 // 無名関数を引数として渡す:fn() - $itemにタグをつける
-$map3 = array_map(fn($item)=>'<th>'.$item.'</th>', $ja_fileds);
-echo implode('', $map3), PHP_EOL;
+$mapped_array3 = array_map(fn($item)=>'<th>'.$item.'</th>', $ja_fileds);
+echo implode('', $mapped_array3), PHP_EOL;
 /*出力
-<th>名前</th><th>住所</th><th>電話番号</th><th>誕生日</th>
+<th>名前</th><th>住所</th><th>電話番号</th><th>生年月日</th>
 */
 
 $number = [3.14, 1.87,2.43,4.22];
@@ -486,6 +499,7 @@ class Tag
 		$this->void = $void;
 		return $this;
 	}
+
 	function addAttribute($att)
 	{
 		$this->attribute = array_merge($this->attribute, $att);
@@ -542,6 +556,7 @@ $tag3 = new Tag('textarea');
 echo $tag3->setContent('楽しかったです'), PHP_EOL;
 echo $tag3->addAttribute(['name'=>'kanso']), PHP_EOL;
 echo $tag3->addAttribute(['rows'=>3,'cols'=>20]), PHP_EOL;
+
 /*出力
 <textarea>楽しかったです</textarea>
 <textarea name="kanso">楽しかったです</textarea>
