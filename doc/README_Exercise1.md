@@ -86,7 +86,7 @@ echo '<th>',implode('</th><th>', $ja_fields),'</th>',PHP_EOL;
 ## 2. 配列
 
 ```php
-
+<?php
 # array()関数で配列初期化
 $arr1 = array('理工学部','建築都市工学部','生命科学部',);//最後にコンマがついている
 $arr2 = array('理工学部','建築都市工学部','生命科学部'); //最後にコンマがついてない
@@ -261,7 +261,7 @@ Array
 ### 3.1. 文字列に関する関数
 
 ```php
-
+<?php
 $hobbies = "キャンプ,登山,読書,ゲーム";
 $email = "k23gjk18@st.kyusan-u.ac.jp";
 // explode(): 文字列を分解し配列にする. 逆にimplode()は配列を結合し文字列にする
@@ -330,7 +330,7 @@ sprintf($i): 0012
 ### 3.2. 配列に関する関数
 
 ```php
-
+<?php
 $number = [3.14, 1.87,2.43,4.22];
 $gpa = ['Alice'=>3.14, 'Tom'=>1.87,'Jack'=>2.43,'Ketty'=>4.22];
 // 配列の要素を結合し文字列にする
@@ -419,7 +419,7 @@ Array
 
 ##  4. 関数型プログラミング
 ```php
-
+<?php
 $fields = [
 	'name'=>'名前',
 	'address' => '住所',
@@ -495,7 +495,7 @@ echo PHP_EOL;
 ## 5. オブジェクト指向プログラミング 
 
 ```php
-
+<?php
 class Tag
 {
 	protected $name;
