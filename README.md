@@ -15,5 +15,5 @@
 - `Composer`をダウンロード・インストールする
   - https://getcomposer.org/download/
 # 配布資料
-- [基礎編内容の詳細説明] (doc/README_Lecture1.md)
-- [基礎編演習用サンプルコード] (doc/README_Exercise1.md)
+- [基礎編内容の詳細説明](doc/README_Lecture1.md)
+- [基礎編演習用サンプルコード](doc/README_Exercise1.md)
