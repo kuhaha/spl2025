@@ -52,7 +52,7 @@ $people = [
 	'name'=>'名前',
 	'address' => '住所',
 	'tel'=>'電話番号',
-	'birthday'=>'誕生日',
+	'birthday'=>'生年月日',
 ];
  
 $pattern = "<th>%s</th><th>%s</th><th>%s</th><th>%s</th>". PHP_EOL;
@@ -62,7 +62,7 @@ vprintf($pattern, $en_fields);
 vprintf($pattern, $ja_fields);
 /*出力：
  <th>name</th><th>address</th><th>tel</th><th>birthday</th>
- <th>名前</th><th>住所</th><th>電話番号</th><th>誕生日</th>
+ <th>名前</th><th>住所</th><th>電話番号</th><th>生年月日</th>
 */
 
 # implode(): 要素を繋いで配列を文字列にする
@@ -70,7 +70,7 @@ echo implode(', ', $en_fields), PHP_EOL;
 echo implode(', ', $ja_fields), PHP_EOL;
 /*出力：
  name, address, tel, birthday 
- 名前, 住所, 電話番号, 誕生日
+ 名前, 住所, 電話番号, 生年月日
 */
 
 # implode(): 要素を繋いで配列を文字列にする
@@ -78,7 +78,7 @@ echo '<th>',implode('</th><th>', $en_fields),'</th>', PHP_EOL;
 echo '<th>',implode('</th><th>', $ja_fields),'</th>',PHP_EOL;
 /*出力：
  <th>name</th><th>address</th><th>tel</th><th>birthday</th>
- <th>名前</th><th>住所</th><th>電話番号</th><th>誕生日</th>
+ <th>名前</th><th>住所</th><th>電話番号</th><th>生年月日</th>
 */
 
 ```
@@ -263,7 +263,7 @@ Array
 ```php
 <?php
 $hobbies = "キャンプ,登山,読書,ゲーム";
-$email = "k23gjk18@st.kyusan-u.ac.jp";
+$email = "k55gjk08@st.kyusan-u.ac.jp";
 // explode(): 文字列を分解し配列にする. 逆にimplode()は配列を結合し文字列にする
 $array1 = explode(',', $hobbies);
 print_r($array1);
@@ -282,7 +282,7 @@ print_r($array2);
 /*出力：
 Array
 (
-    [0] => k23gjk18
+    [0] => k55gjk08
     [1] => st.kyusan-u.ac.jp
 )
 */
@@ -308,9 +308,9 @@ echo '$emailの最初の8文字：', substr($email,0,8), PHP_EOL;
 echo '$emailの9文字目以降の部分：', substr($email,9), PHP_EOL;
 
 /*出力：
-$email = 'k23gjk18@st.kyusan-u.ac.jp'
+$email = 'k55gjk08@st.kyusan-u.ac.jp'
 $emailの長さ：26
-$emailの最初の8文字：k23gjk18
+$emailの最初の8文字：k55gjk08
 $emailの9文字目以降の部分：st.kyusan-u.ac.jp
 */
 
