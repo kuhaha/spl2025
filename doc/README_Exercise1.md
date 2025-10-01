@@ -152,7 +152,10 @@ $arr6 = Array
     [3] => 生命科学部
 )
 */
+```
 
+```php
+<?php
 ### 要素の追加 
 echo '代入による要素追加', PHP_EOL;
 $arr4[] = 'データサイエンス学部';
@@ -200,7 +203,11 @@ Array
     [6] => 人間学部
 )
 */
+```
 
+
+```php
+<?php
 ### 要素の削除
 
 unset($arr4[0]);
@@ -291,7 +298,10 @@ Array
     [3] => jp
 )
 */
+```
 
+```php
+<?php
 echo "$email = '{$email}'", PHP_EOL;
 echo '$emailの長さ：', strlen($email), PHP_EOL;
 echo '$emailの最初の8文字：', substr($email,0,8), PHP_EOL;
@@ -375,7 +385,10 @@ Array
     [Tom] => 1.87
 )
 */
+```
 
+```php
+<?php
 // 配列をキーの昇順でソートする
 $gpa_sorted = $gpa;
 ksort($gpa_sorted);
@@ -527,7 +540,10 @@ class Tag
 		return $str . '</' .$this->name. '>';
 	}
 }
+```
 
+```php
+<?php
 $tag = new Tag('input');
 echo $tag, PHP_EOL;
 /*出力
