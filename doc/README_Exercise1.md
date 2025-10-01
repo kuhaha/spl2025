@@ -242,14 +242,13 @@ Array
 
 ## 3.  組み込み関数
 
-### 3.1. 文字列の関数
+### 3.1. 文字列に関する関数
 
 ```php
 
-
 $hobbies = "キャンプ,登山,読書,ゲーム";
 $email = "k23gjk18@st.kyusan-u.ac.jp";
-
+// explode(): 文字列を分解し配列にする. 逆にimplode()は配列を結合し文字列にする
 $array1 = explode(',', $hobbies);
 print_r($array1);
 /*出力例：
@@ -300,22 +299,22 @@ $i = 12;
 $str1 = str_pad($i, 4, '0', STR_PAD_LEFT);
 $str2 = sprintf('%04d', $i);
 echo '$i = 12', PHP_EOL;
-echo 'str_pad(): ', $str1, PHP_EOL;
-echo 'sprintf(): ', $str2, PHP_EOL;
+echo 'str_pad($i): ', $str1, PHP_EOL;
+echo 'sprintf($i): ', $str2, PHP_EOL;
 /*出力
 $i = 12
-str_pad(): 0012
-sprintf(): 0012
+str_pad($i): 0012
+sprintf($i): 0012
 */
 ```
 
-### 3.2. 配列の関数
+### 3.2. 配列に関する関数
 
 ```php
 
 $number = [3.14, 1.87,2.43,4.22];
 $gpa = ['Alice'=>3.14, 'Tom'=>1.87,'Jack'=>2.43,'Ketty'=>4.22];
-
+// 配列の要素を結合し文字列にする
 echo '(',implode(',', $number), ')', PHP_EOL;
 echo implode('/', array_keys($gpa)), PHP_EOL;
 /*出力
