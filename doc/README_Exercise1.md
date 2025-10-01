@@ -4,32 +4,32 @@
 <?php
 # 文字列補間: 変数を使って文字列を補完する
     
-$title = '自動運転に向けての危険検知支援システムの開発';
+$title = '複合AIシステム';
 // $title変数を使って以下のように出力
-// 題目:「自動運転に向けての危険検知支援システムの開発」
+// 研究分野:「複合AIシステム」
 
-echo '題目:「', $title, '」', PHP_EOL; // echo文で複数文字列を出力
-echo '題目:「'. $title. '」'. PHP_EOL; // echo文で繋いだ文字列を出力
-echo "題目:「{$title}」".PHP_EOL; // echo文で変数を埋め込んで（ダブルクォート文字列）出力する
+echo '研究分野:「', $title, '」', PHP_EOL; // echo文で複数文字列を出力
+echo '研究分野:「'. $title. '」'. PHP_EOL; // echo文で繋いだ文字列を出力
+echo "研究分野:「{$title}」".PHP_EOL; // echo文で変数を埋め込んで（ダブルクォート文字列）出力する
 /*出力：
- 題目:「自動運転に向けての危険検知支援システムの開発」
- 題目:「自動運転に向けての危険検知支援システムの開発」
- 題目:「自動運転に向けての危険検知支援システムの開発」
+ 研究分野:「複合AIシステム」
+ 研究分野:「複合AIシステム」
+ 研究分野:「複合AIシステム」
 */
 
 # sprintf(), printf(): フォマードされた文字列の生成と出力
-printf('題目:「%s」'. PHP_EOL, $title);
-printf("題目:「%s」". PHP_EOL, $title);
+printf('研究分野:「%s」'. PHP_EOL, $title);
+printf("研究分野:「%s」". PHP_EOL, $title);
 /*出力：
- 題目:「自動運転に向けての危険検知支援システムの開発」
- 題目:「自動運転に向けての危険検知支援システムの開発」
+ 研究分野:「複合AIシステム」
+ 研究分野:「複合AIシステム」
 */
 
-printf('題目:"%s"'. PHP_EOL, $title);
-printf("題目:'%s'". PHP_EOL, $title);
+printf('研究分野:"%s"'. PHP_EOL, $title);
+printf("研究分野:'%s'". PHP_EOL, $title);
 /*出力例：
- 題目:"自動運転に向けての危険検知支援システムの開発"
- 題目:'自動運転に向けての危険検知支援システムの開発'
+ 研究分野:"複合AIシステム"
+ 研究分野:'複合AIシステム'
 */
 
 # vprintf() : 配列を引数としてフォーマットされた文字列を出力
@@ -39,9 +39,16 @@ $people = [
 	'tel'=>'電話番号',
 	'birthday'=>'誕生日',
 ];
+
+// %s:　文字列(string)としてフォーマット
+// %d: 十進制の整数(decimal)としてフォーマット, 
+// %03d: 3桁の整数にして不足の桁数はゼロ「0」で足す
+// %f: 小数(float)としてフォーマット, 
+// %.3f: 小数点以下3桁の小数にして不足の桁数はゼロ「0」で足す
+ 
 $pattern = "<th>%s</th><th>%s</th><th>%s</th><th>%s</th>". PHP_EOL;
-$en_fields = array_keys($people);
-$ja_fields = array_values($people);
+$en_fields = array_keys($people); //配列のキーを配列にして受け取る 
+$ja_fields = array_values($people); //配列の値を配列にして受け取る
 vprintf($pattern, $en_fields);
 vprintf($pattern, $ja_fields);
 /*出力：
