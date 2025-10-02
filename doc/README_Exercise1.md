@@ -496,12 +496,15 @@ echo PHP_EOL;
 
 ```php
 <?php
+/***
+ * HTMLタグを管理するクラス(タグの有効性チェックは未対応！)
+ */
 class Tag
 {
 	protected $name;
 	protected $attribute;
 	protected $content;
-	protected $void = false;//閉じタグがない場合、true
+	protected $void = false; // 閉じタグがない場合、true
 
 	function __construct($name, $content=null)
 	{
