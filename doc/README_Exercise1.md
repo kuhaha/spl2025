@@ -565,7 +565,9 @@ echo $tag, PHP_EOL;
 <input type="text" name="uid" class="form-control">
 */
 
-$tag1 = $tag;
+// PHPの代入演算子は、デフォルトで値をコピーする（$tag1= clone $tag;と同じ）
+// 参照を代入したいとき、$tag = &$tag;となる。
+$tag1 = $tag; 
 $tag1->addAttribute(['type'=>'hidden','name'=>'pid']);
 echo $tag1, PHP_EOL;
 /*出力
