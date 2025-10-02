@@ -566,7 +566,7 @@ echo $tag, PHP_EOL;
 */
 
 // PHPの代入演算子は、デフォルトで値をコピーする（$tag1= clone $tag;と同じ）
-// 参照を代入したいとき、$tag = &$tag;となる。
+// 参照を代入したいとき、$tag1 = &$tag;となる。同じオブジェクトを参照しているため、後の操作により両方に影響を与える
 $tag1 = $tag; 
 $tag1->addAttribute(['type'=>'hidden','name'=>'pid']);
 echo $tag1, PHP_EOL;
