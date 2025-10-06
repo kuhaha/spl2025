@@ -20,7 +20,9 @@ echo "研究分野:「{$title}」".PHP_EOL; // echo文で変数を埋め込ん�
 
 ```php
 <?php
-# sprintf(format, args), printf(format, args): フォマードされた文字列の生成と出力
+# sprintf(format, args)：文字列をフォーマーとして返す
+# printf(format, args): フォマードされた文字列を出力する
+
 /*
  よく使われるformat
  %s:　文字列(string)としてフォーマット
@@ -47,7 +49,8 @@ printf("研究分野:'%s'". PHP_EOL, $title);
 
 ```php
 <?php
-# vprintf() : 配列を引数としてフォーマットされた文字列を出力
+# vsprintf() : 配列を引数としてフォーマットされた文字列を返す
+# vprintf() : 配列を引数としてフォーマットされた文字列を出力。vprintf() はecho vsprintf();と同じ
 $people = [
 	'name'=>'名前',
 	'address' => '住所',
