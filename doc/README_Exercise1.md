@@ -17,6 +17,29 @@ echo "研究分野:「{$title}」".PHP_EOL; // echo文で変数を埋め込ん�
  研究分野:「複合AIシステム」
 */
 ```
+```php
+<?php
+// 三項演算子** `(条件式) ? (式1) : (式2)`
+$grade = 87;
+$result = $grade >= 90 ? 'S' : 'A以下';
+echo $result, PHP_EOL; //  出力：A以下
+```
+
+```php
+<?php
+// Null合体演算子**`(式1) ?? (式2)`
+$id = $_GET['id'] ?? : 0;
+   
+// 以下の三項演算式と同じ
+$id = isset($_GET['id']) ? $_GET['id'] : 0;
+   
+//以下のif文と同じ
+if (isset($_GET['id'])) {
+   $id = $_GET['id'];
+}else {
+   $id = 0;
+}
+```
 
 ```php
 <?php
